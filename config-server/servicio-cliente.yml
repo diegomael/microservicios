@@ -4,9 +4,6 @@ server:
   error:
     include-message: always
     include-binding-errors: always
-# H2 Console en navegador:
-# http://localhost:8092/h2-console
-# Habilitando H2 Console
 spring:
   # ===============================
   # DB
@@ -16,20 +13,21 @@ spring:
     password: ''
     url: jdbc:mysql://localhost:3306/probando1?serverTimezone=America/Lima&allowPublicKeyRetrieval=true&useSSL=false
     username: root
+    name: 
 
   # ===============================
   # JPA / HIBERNATE
   # ===============================
   jpa:
-    show-sql: true
+    #show-sql: true
     hibernate:
       ddl-auto: update
     database-platform: org.hibernate.dialect.H2Dialect
     properties:
       hibernate:
-        show_sql: true
-        use_sql_comments: false
-        format_sql: false
+        #show_sql: true
+        #use_sql_comments: false
+        #format_sql: false
 logging:
   pattern:
     console: "%d{yyyy-MM-dd HH:mm:ss} ${LOG_LEVEL_PATTERN:-%5p} %m%n"
@@ -38,3 +36,4 @@ eureka:
   client:
     serviceUrl:
         defaultZone: http://localhost:8099/eureka/
+
